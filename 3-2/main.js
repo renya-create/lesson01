@@ -1,10 +1,34 @@
-for(let i=1;i<=9;i++){
+
+let tate=process.argv[2];
+
+let yoko=process.argv[3];
+
+for(let i=1;i<=tate;i++){
+
   let array=[];
 
-   for(let j=1;j<=9;j++){
-   array+=i*j
-   array+=`\t`
+  if(i%2===1){
+    for(let j=1;j<=yoko;j++){
+
+      if(j%2===1){
+       array.push("*");
+      }else{
+       array.push("-");
+      }
+
+    }
+
+  }else{ 
+    for(let j=1;j<=yoko;j++){
+
+      if(j%2===1){
+       array.push("-");
+      }else{
+       array.push("*");
+      }
+
+    }
   }
 
-  console.log(array);
+console.log(array.join(""));
 }
